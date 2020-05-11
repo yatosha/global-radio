@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "929437853102",
+    "firebase_url": "https://fcm-push-9841c.firebaseio.com",
+    "project_id": "fcm-push-9841c",
+    "storage_bucket": "fcm-push-9841c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929437853102:android:6f07db79de095f60",
+        "android_client_info": {
+          "package_name": "com.globalpublishers.radio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929437853102-d9v77v6eqng42c7os7mfsl4gnb9gtvcj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCRnFZWEzHfF9HmvPmcPdwr3R7laiZu2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929437853102-d9v77v6eqng42c7os7mfsl4gnb9gtvcj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929437853102:android:b9bde52193820afa",
+        "android_client_info": {
+          "package_name": "com.globalradio.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929437853102-d9v77v6eqng42c7os7mfsl4gnb9gtvcj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCRnFZWEzHfF9HmvPmcPdwr3R7laiZu2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929437853102-d9v77v6eqng42c7os7mfsl4gnb9gtvcj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

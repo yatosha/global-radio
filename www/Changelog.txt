@@ -1,0 +1,8 @@
+Sharing Buttons Under Post Title
+-Added sharing buttons under the post to make it possible sharing individual posts respectively.
+
+Swipe From Post
+-Added swipe left gesture to go back to post list tab from the post details.
+
+News Tiles Title Color
+-Changed the news tile titles to black for more visibility and appeal.

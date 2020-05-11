@@ -1,0 +1,115 @@
+.demo-card-wide.mdl-card {
+    width: 100%;
+    margin: auto;
+}
+
+.demo-card-wide>.mdl-card__titled {
+    color: rgb(255, 255, 255);
+    height: 176px;
+    background: url('./images/more-from-4.png') center / cover;
+    font-weight: bold;
+}
+
+.menu-header{
+    color: rgb(255, 255, 255);
+    background-color: #810112;
+    height: 100px;
+}
+
+.sub_card{
+    min-height: 100px;
+    width: 100%;
+}
+.sub_card_image{
+    width:100px;
+    height:85px;
+    float: left; 
+    padding-right:10px
+}
+.demo-card-wide>.mdl-card__menu {
+    color: #fff;
+}
+
+.player{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.post_list_item {
+    padding: 25px 0 25px 0;
+}
+
+#player {
+    display: none;
+}
+
+
+.marquee {
+    overflow: hidden;
+    color: rgb(49, 49, 49);
+    font-weight: bold;
+    padding-top:20px; 
+}
+
+.b{
+    font-weight:bold;
+}
+
+.gr_1 {
+    background-image: url(../img/dsm.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.post_title{
+    font-size:16px;
+    ccolor: rgb(49, 49, 49);
+}
+
+.share_btn{
+    position: fixed; /* Fixed/sticky position */
+    bottom: 50px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    color: white; /* Text color */
+    padding: 15px; /* Some padding */
+}
+
+
+.splash{
+    width:100%;
+    height: 100%;
+    background:white;
+    position: fixed;
+    top: 10;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow-x: hidden;
+    overflow-y: auto;
+    }
+
+
+.gr_bg{
+    background:#fdfdfd;
+}
+
+.tab_menus{
+    margin-bottom: -5px;
+}
+
+.gr_2{
+    background-color: #e9e9e9;
+}
+
+.cb{
+    color: #000000;
+}
+
+.news_details > p, .news_details h5, .news_details span, .news_details section{
+    padding: 0px 5px 0px 5px;
+}

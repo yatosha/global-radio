@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Android</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/dialog-polyfill.css">
+    <script src="js/material.min.js"></script>
+    <style>
+        .l {
+            padding-top: 2px;
+        }
+    </style>
+</head>
+
+<body class="gr_1" style="background-color: #f1f1f1">
+    <div class='splash' id='splash'>
+        <center>
+            <img src="./img/logo.png" width='150px' style='padding-top:50%;' height="auto" alt="">
+        </center>
+    </div>
+
+
+    <dialog id="updateDialog" class="mdl-dialog">
+        <h4 class="mdl-dialog__title">Update!</h4>
+        <div class="mdl-dialog__content">
+            <p>
+                Kuna toleo jipya la app yetu ya +255 Gobal Radio! Tafadhali update.
+            </p>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button type="button" class="mdl-button" onclick="updateApp()">Update</button>
+            <button type="button" class="mdl-button"
+                onclick="document.querySelector('#updateDialog').close()">Badae</button>
+        </div>
+    </dialog>
+
+    <dialog id="closeDialog" class="mdl-dialog">
+        <h4 class="mdl-dialog__title">Subiri!</h4>
+        <div class="mdl-dialog__content">
+            <p>
+                Tungependa usambaze upendo kwa ku share app ya Global Radio na marafiki au utupe ratings Playstore!
+                Asante.
+            </p>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button type="button" onclick="shareApp()" class="mdl-button">Share</button>
+            <button type="button" onclick="closeApp()" class="mdl-button">Funga</button>
+            <button type="button" class="mdl-button"
+                onclick="document.querySelector('#closeDialog').close()">Ghairi</button>
+        </div>
+    </dialog>
+
+    <dialog id="connectionErrorDialog" class="mdl-dialog">
+        <h4 class="mdl-dialog__title">Tatizo!</h4>
+        <div class="mdl-dialog__content">
+            <p>
+                Samahani, kuna tatizo la kiufundi. Tafadhali funga na ufungue tena app na uhakikishe kua umewasha data
+                na una kifurushi
+            </p>
+        </div>
+        <div class="mdl-dialog__actions">
+            <button type="button" onclick="closeApp()" class="mdl-button">Funga</button>
+        </div>
+    </dialog>
+
+
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title b">+255 Global Radio</span>
+            </div>
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect tab_menus">
+                <a href="#scroll-tab-radio" id="radio_btn" class="mdl-layout__tab is-active b">Radio</a>
+                <a href="#scroll-tab-podcasts" id="podcasts_btn" class="mdl-layout__tab b">Podcasts</a>
+                <a href="#scroll-tab-habari" id="habari_btn" class="mdl-layout__tab b">Habari</a>
+                <a href="#scroll-tab-burudani" id="burudani_btn" class="mdl-layout__tab b">Burudani</a>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title b menu-header">
+                Menu
+            </span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link l"
+                    onclick="openLink('https://docs.google.com/document/d/1UZHlvJ7bNk3hCp0sGiwa-qVyCaFwYy-eRst_dgEZLG0/edit')"
+                    href="#"> <img src="./img/schedule.png" width="25px" height='100%'> Ratiba ya Vipindi</a>
+                <br />
+                <a class="mdl-navigation__link l" href="https://facebook.com/255-Global-Radio-2162789610482319/"> <img
+                        src="./img/fb.png" width="25px" height='100%'> Facebook</a>
+                <a class="mdl-navigation__link l" href="https://twitter.com/255globalradio"> <img src="./img/twtr.png"
+                        width="25px" height='100%'> Twitter</a>
+                <a class="mdl-navigation__link l" href="https://www.instagram.com/255globalradio/"> <img
+                        src="./img/ig.png" width="25px" height='100%'> Instagram</a>
+                <a class="mdl-navigation__link l" href="https://www.youtube.com/channel/UCQxvni6uRBLyZxpIrMD1XsQ"><img
+                        src="./img/yt_btn.png" width="25px" height='100%'>Youtube</a>
+                <a class="mdl-navigation__link l"
+                    href="https://play.google.com/store/apps/details?id=com.globalradio.app"><img
+                        src="./img/playstore.png" width="25px" height='100%'> Rate us on Playstore</a>
+                <a class="mdl-navigation__link l" onclick="shareApp()" href="#"><img src="./img/share.png" width="25px"
+                        height='100%'> Share</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-radio">
+                <div class="page-content">
+
+
+                    <p class='marquee' id='marquee'>🚨 <span id='now_playing'>Karibu +255 Global Radio.</span></p>
+
+
+                    <div class="demo-card-wide mdl-card" style='background: transparent'>
+                        <div class="mdl-card__title" style="margin:auto;">
+                            <img src="./img/logo.png" width="150px" height="auto" alt="">
+                        </div>
+                        <div class="player">
+                            <audio id="player" controls preload="auto" class="hidden">
+                                <source src="" type="audio/mpeg" muted="muted">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <center>
+                                <img id='toggle_btn_2' onclick="togglePlayer()" src="./img/play_btn.png" width="100px"
+                                    height="auto" alt="">
+                            </center>
+                        </div>
+                    </div>
+                    <div class='share_btn'>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect gr_bg"
+                            onclick='shareApp()'>
+                            <img src="./img/share.png" width="30px" height='auto'>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="mdl-layout__tab-panel" id="scroll-tab-habari">
+                <div class="page-content">
+                    <span id="post_list_habari"></span>
+                </div>
+            </section>
+
+            <section class="mdl-layout__tab-panel" id="scroll-tab-burudani">
+                <div class="page-content">
+                    <span id="post_list_burudani"></span>
+                </div>
+            </section>
+
+            <section class="mdl-layout__tab-panel" id="scroll-tab-podcasts">
+                <div class="page-content">
+                    <span id="post_list_podcasts"></span>
+                </div>
+            </section>
+
+            <section class="mdl-layout__tab-panel" id="scroll-tab-news-details">
+                <div class="page-content">
+                    <div id="news_details" class="news_details"></div>
+                    <div class='share_btn'>
+                        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect gr_bg"
+                            onclick='goBackToTabs()'>
+                            <img src="./img/back.png" width="30px" height='auto'>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/jquery.lazy.min.js"></script>
+    <script src="js/dialog-polyfill.js"></script>
+    <script src="js/jquery.touchwipe.1.1.1.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        (function () {
+            'use strict';
+            var dialog = document.querySelector('.mdl-dialog');
+            if (!dialog.showModal) {
+                dialogPolyfill.registerDialog(dialog);
+            }
+        }());
+    </script>
+</body>
+
+</html>

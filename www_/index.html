@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>My App</title>
+  <!-- Path to Framework7 Library CSS-->
+  <link rel="stylesheet" href="css/framework7.material.min.css">
+  <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="css/my-app.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body class="layout-dark theme-black">
+
+  <!-- Status bar overlay for fullscreen mode-->
+  <div class="statusbar-overlay"></div>
+  <!-- Panels overlay-->
+  <div class="panel-overlay"></div>
+  <!-- Left panel with reveal effect-->
+  <div class="gcolor panel panel-left panel-reveal" style="background-color:#810112;">
+    <div class="content-block">
+      <div class="title">
+        <h3>Menyu</h3>
+      </div>
+    </div>
+    <div class="content-block gcolor">
+      <div class="list-block gcolor">
+        <a href="#" class="item-link">
+          <div class="item-content">
+            <div class="item-media sicon"><i class="f7-icons">home_fill</i></div>
+            <div class="item-inner">Mwanzo</div>
+          </div>
+        </a>
+
+        <a href="#index2" class="item-link">
+          <div class="item-content">
+            <div class="item-media sicon"><i class="f7-icons">mic_fill</i></div>
+            <div class="item-inner">Podcasts</div>
+          </div>
+        </a>
+
+        <a href="#" class="item-link">
+          <div class="item-content">
+            <div class="item-media"><i class="f7-icons">info_round</i></div>
+            <div class="item-inner">Kuhusu Sisi</div>
+          </div>
+        </a>
+
+        <br />
+
+
+        <a href="https://facebook.com/Globalpublishers/" class="item-link external">
+          <div class="item-content">
+            <div class="item-media"><i class="f7-icons">logo_facebook</i></div>
+            <div class="item-inner">Facebook</div>
+          </div>
+        </a>
+
+
+        <a href="https://www.instagram.com/globalpublishers/" class="item-link external">
+          <div class="item-content">
+            <div class="item-media"><i class="f7-icons">logo_twitter</i></div>
+            <div class="item-inner">Twitter</div>
+          </div>
+        </a>
+
+
+        <a href="https://www.instagram.com/globalpublishers/" class="item-link external">
+          <div class="item-content">
+            <div class="item-media"><i class="f7-icons">logo_instagram</i></div>
+            <div class="item-inner">Instagram</div>
+          </div>
+        </a>
+
+
+
+        <a href="https://play.google.com/store/apps/details?id=com.globalradio.app" class="item-link external">
+          <div class="item-content">
+            <div class="item-media"><i class="f7-icons">star_fill</i></div>
+            <div class="item-inner">Rate us on Playstore</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+  <!-- Right panel with cover effect-->
+  <div class="panel panel-right panel-cover">
+    <div class="content-block">
+      <p>Right panel content goes here</p>
+    </div>
+  </div>
+
+
+  <!-- Views-->
+  <div class="views">
+
+
+    <!-- Your main view, should have "view-main" class-->
+    <div class="view view-main">
+      <!-- Top Navbar-->
+      <div class="navbar" style="background-color:#810112;">
+        <div class="navbar-inner">
+          <div class="left">
+            <!-- Right link contains only icon - additional "icon-only" class--><a href="#"
+              class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+          </div>
+          <!-- We have home navbar without left link-->
+          <div class="center sliding">Global Radio</div>
+          <div class="right">
+            <!-- Right link contains only icon - additional "icon-only" class<a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>-->
+          </div>
+        </div>
+      </div>
+      <a href="#" onclick="shareApp()" class="floating-button gcolor" style="margin-bottom:70px">
+        <img src="./img/share.png" width="25px" auto="auto" alt="">
+      </a>
+
+
+      <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+      <div class="pages navbar-through toolbar-through">
+
+        <!-- Page, data-page contains page name-->
+        <div data-page="index" class="page">
+          <!-- Scrollable page content-->
+          <div class="page-content"
+            style="background-image: url(./img/logo.png);background-position: center center;background-size: 100% auto;">
+            <div class="content-block-title">
+              <p class='marquee' id='marquee'>💬 <span id='now_playing'>Karibu +255 Global Radio.</span></p>
+            </div>
+            <div class="content-block">
+              <div class="content-block-inner">
+                <div class="player">
+                  <audio id="player" controls preload="auto" class="hidden">
+                    <source src="" type="audio/mpeg" muted="muted">
+                    Your browser does not support the audio element.
+                  </audio>
+                  <center>
+                    <!-- <img src="./img/app_logo.png" width='150px' height='auto' alt=""> -->
+                    <img id='toggle_btn_2' onclick="togglePlayer()" src="./img/play_btn.png" width="100px" auto="auto"
+                      alt="" class="toggle_btn_2 fish">
+                    <img src="./img/play_ring.png" width="100px" auto="auto" alt="" id='play_ring'
+                      class="toggle_btn_2 fishes">
+                  </center>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+
+      </div>
+      <!-- Toolbar-->
+      <div class="toolbar toolbar-bottom" id='toolbar_bottom'>
+        <div class="toolbar-inner">
+          <center><span id='localbannerad'></span></center>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+  <!-- Path to Framework7 Library JS-->
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/framework7.min.js"></script>
+  <!-- Path to your app js-->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.marquee.min.js"></script>
+  <script type="text/javascript" src="js/my-app.js"></script>
+  <script type="text/javascript" src="js/player.js"></script>
+  <script>
+    $('#marquee').marquee({
+      //duration in milliseconds of the marquee
+      duration: 15000,
+      //gap in pixels between the tickers
+      gap: 50,
+      //time in milliseconds before the marquee will start animating
+      delayBeforeStart: 0,
+      //'left' or 'right'
+      direction: 'left',
+      //true or false - should the marquee be duplicated to show an effect of continues flow
+      duplicated: true
+    });
+
+    function dr() {
+      $("#toggle_btn_2").attr("src", "./img/play_btn.png");
+      $("#play_ring").removeClass("rotate-in-center");
+      isOn = false;
+      alert(player.error.code);
+      radioLossConnection();
+    }
+  </script>
+</body>
+
+</html>
