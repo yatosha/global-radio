@@ -49,7 +49,7 @@ player.ontimeupdate  = function() {
 
 function retryRadio(){
     if(retryCount < 30){
-        radio_url = "https://zas7.ndx.co.za:8026/stream";
+        
         console.log(radio_url)
         player.src = radio_url;
         player.load();
