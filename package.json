@@ -10,7 +10,9 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
+    "cordova-admobsdk": "^7.37.0",
     "cordova-android": "^8.0.0",
+    "cordova-ios": "^5.1.1",
     "cordova-plugin-admobpro": "^2.37.2",
     "cordova-plugin-background-mode": "^0.7.2",
     "cordova-plugin-extension": "^1.5.4",
