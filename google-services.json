@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "503066099736",
+    "firebase_url": "https://global-radio-89ae2.firebaseio.com",
+    "project_id": "global-radio-89ae2",
+    "storage_bucket": "global-radio-89ae2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503066099736:android:7313fe54cfdb6bc0e1836d",
+        "android_client_info": {
+          "package_name": "com.globalradio.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503066099736-k8id4q4tfpbs5dvh0ij5tv1r78fgiqpi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfBk--txquzuWfyZabOLyy_4eq7UJF1hM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503066099736-k8id4q4tfpbs5dvh0ij5tv1r78fgiqpi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
